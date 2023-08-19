@@ -1,0 +1,124 @@
+GET http://localhost:4000/users
+
+
+
+###
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "name":"admin",
+    "email":"admin@mail.com",
+    "password":"admin123",
+    "confPassword":"admin123"
+}
+
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "email":"admin@mail.com",
+    "password":"admin123"
+}
+
+
+###
+GET http://localhost:4000/token
+
+###
+DELETE http://localhost:4000/logout
+
+//===================================================================
+
+###
+GET http://localhost:4000/anggota
+
+###
+POST http://localhost:4000/anggota
+Content-Type: application/json
+
+{
+    "name":"anggota 2",
+    "nim":"20192312312",
+    "prodi":"TS",
+    "no_hp":"089123112311"
+}
+
+###
+GET  http://localhost:4000/anggota/3
+
+
+###
+PATCH    http://localhost:4000/anggota/3
+Content-Type: application/json
+
+{
+    "name":"anggota 2"
+}
+
+
+###
+DELETE   http://localhost:4000/anggota/3
+
+
+//====================================================================
+
+###
+GET http://localhost:4000/buku
+
+###
+POST http://localhost:4000/buku
+Content-Type: application/json
+
+{
+    "judul":"Atomic Habits",
+    "pengarang":"James Clear",
+    "penerbit":"Gramedia Pustaka Utama",
+    "isbn":"12839183"
+}
+
+###
+GET  http://localhost:4000/buku/1
+
+
+###
+PATCH    http://localhost:4000/buku/1
+Content-Type: application/json
+
+{
+    "judul":"Atomic Habits"
+}
+
+###
+DELETE   http://localhost:4000/buku/3
+
+
+//===================================
+
+###
+GET http://localhost:4000/pinjaman
+
+###
+POST http://localhost:4000/pinjaman
+Content-Type: application/json
+
+{
+    "nama":"anggota 2",
+    "judul":"Atomic Habits ",
+    "tanggal_pinjam":"2023/08/19",
+    "tanggal_kembali":"",
+    "status":"pinjam"
+}
+
+###
+GET  http://localhost:4000/pinjaman/1
+
+
+###
+DELETE   http://localhost:4000/pinjaman/2
+
+//======================================================
+###
+GET  http://localhost:4000/riwayat
